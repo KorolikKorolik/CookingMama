@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Проверенные рецепты со всего мира: выбирайте блюдо, подбирайте ингредиенты и готовьте с удовольствием.">
+    <title>CookingMama — рецепты для хорошего дня</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="images/logo.jpg" rel="icon" type="image/jpeg">
+  </head>
+  <body data-category="Все рецепты">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top site-nav">
+      <div class="container">
+        <a class="navbar-brand brand" href="index.html" aria-label="CookingMama — главная">
+          <img class="brand-icon" src="images/logo.jpg" alt="">
+          <span>CookingMama</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavigation"
+          aria-controls="mainNavigation"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Все рецепты</a></li>
+            <li class="nav-item"><a class="nav-link" href="breakfasts.html">Завтраки</a></li>
+            <li class="nav-item"><a class="nav-link" href="main-dishes.html">Главные блюда</a></li>
+            <li class="nav-item"><a class="nav-link" href="desserts.html">Десерты</a></li>
+          </ul>
+          <a class="nav-cta" href="#recipes"><i class="bi bi-search me-2"></i>Найти рецепт</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Рецепты на каждый день</span>
+            <h1>Готовить — это<br><span>просто.</span></h1>
+            <p>Проверенные рецепты и понятные шаги.</p>
+            <a class="btn btn-main btn-lg" href="recipes.html">Выбрать рецепт <i class="bi bi-arrow-right ms-2"></i></a>
+          </div>
+          <div class="hero-sticker"><span>Просто</span><strong>вкусно</strong><i class="bi bi-stars"></i></div>
+        </div>
+      </section>
+      <section class="category-section" aria-label="Категории рецептов">
+        <div class="container">
+          <div class="section-heading compact-heading">
+            <div><span class="eyebrow"><h2>Что сегодня готовим?</h2></span></div>
+          </div>
+          <div class="category-list">
+            <a class="category-chip" href="breakfasts.html">
+              <span class="category-icon"><i class="bi bi-sunrise"></i></span>
+              <span>Завтраки</span>
+            </a>
+            <a class="category-chip" href="main-dishes.html">
+              <span class="category-icon"><i class="bi bi-egg-fried"></i></span>
+              <span>Главные блюда</span>
+            </a>
+            <a class="category-chip" href="desserts.html">
+              <span class="category-icon"><i class="bi bi-cake2"></i></span>
+              <span>Десерты</span>
+            </a>
+            <a class="category-chip" href="recipes.html">
+              <span class="category-icon"><i class="bi bi-grid"></i></span>
+              <span>Все рецепты</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section-space recipes-section" id="recipes">
+        <div class="container">
+          <div class="section-heading recipes-heading">
+            <div>
+              <span class="eyebrow">Сохранили для вас</span>
+              <h2 id="recipeSectionTitle">Популярные рецепты</h2>
+            </div>
+            <a class="text-link" href="recipes.html">Все рецепты <i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+          <div class="sticky-filter">
+            <form class="filter-panel row g-3 align-items-end" id="filterForm">
+              <div class="col-12 col-md-6 col-lg-4">
+                <label class="form-label" for="searchInput">Поиск рецепта</label>
+                <div class="search-control">
+                  <i class="bi bi-search"></i>
+                  <input id="searchInput" class="form-control" type="search" placeholder="Например, паста или шоколад">
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <label class="form-label" for="cuisineFilter">Кухня мира</label>
+                <select id="cuisineFilter" class="form-select"><option value="">Любая страна</option></select>
+              </div>
+              <div class="col-6 col-lg-3">
+                <label class="form-label" for="ingredientFilter">Главный ингредиент</label>
+                <select id="ingredientFilter" class="form-select"><option value="">Любой ингредиент</option></select>
+              </div>
+              <div class="col-12 col-lg-2">
+                <button class="btn btn-reset w-100" id="resetFilters" type="button">
+                  <i class="bi bi-arrow-counterclockwise me-2"></i>
+                  Сбросить
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="results-meta">
+            <span id="resultsCount" aria-live="polite"></span>
+            <span class="meta-hint"><i class="bi bi-sliders me-1"></i>Настройте поиск по вкусу</span>
+          </div>
+          <div class="row g-4" id="recipeGrid" data-limit="3" data-title="Популярные рецепты"></div>
+          <div class="empty-state d-none" id="emptyState">
+            <span class="empty-icon"><i class="bi bi-emoji-smile"></i></span>
+            <h3>Такого рецепта пока нет</h3>
+            <p>Попробуйте изменить фильтры — и найдём что-нибудь вкусное.</p>
+            <button type="button" class="btn btn-main" id="emptyReset">Сбросить фильтры</button>
+          </div>
+        </div>
+      </section>
+      <section class="page-intro" aria-labelledby="about-title">
+        <div class="container">
+          <span class="eyebrow">О CookingMama</span>
+          <h2 id="about-title">Вдохновение для домашней кухни</h2>
+          <p>CookingMama помогает находить рецепты на каждый день: выбирайте блюда по категории, кухне и ингредиентам, а затем готовьте по понятным шагам с удобным пересчётом порций.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-brand">
+            <a class="navbar-brand brand" href="index.html">
+              <img class="brand-icon" src="images/logo.jpg" alt="">
+              <span>CookingMama</span>
+            </a>
+          </div>
+          <nav class="footer-navigation" aria-label="Страницы сайта">
+            <h2 class="footer-heading">Страницы сайта</h2>
+            <ul class="footer-links">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="recipes.html">Все рецепты</a></li>
+              <li><a href="breakfasts.html">Завтраки</a></li>
+              <li><a href="main-dishes.html">Главные блюда</a></li>
+              <li><a href="desserts.html">Десерты</a></li>
+            </ul>
+          </nav>
+          <div class="footer-copyright">
+            <h2 class="footer-heading">Копирайт</h2>
+            <p class="footer-copy">© 2026 CookingMama. Все права защищены.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Вернуться наверх" title="Наверх" hidden>
+      <i class="bi bi-chevron-up" aria-hidden="true"></i>
+    </button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
