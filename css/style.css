@@ -286,6 +286,41 @@ a {
   background: var(--cream);
 }
 
+.breadcrumbs {
+  margin-bottom: 20px;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font-size: .82rem;
+  list-style: none;
+}
+
+.breadcrumbs li + li::before {
+  margin-right: 8px;
+  color: #a1a198;
+  content: "/";
+}
+
+.breadcrumbs a {
+  color: var(--blue-dark);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--pepper-dark);
+  text-decoration: underline;
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--muted);
+}
+
 .page-intro h1 {
   margin: 8px 0 10px;
   font-size: clamp(2.4rem, 5vw, 3.6rem);
@@ -672,6 +707,10 @@ a {
 .recipe-detail-section {
   min-height: 70vh;
   padding: 32px 0 80px;
+}
+
+.recipe-breadcrumbs {
+  margin-bottom: 24px;
 }
 
 .back-link {

@@ -789,6 +789,10 @@ function getReviewWord(count) {
 
 function openRecipe(recipeId) {
   activeRecipe = recipes.find((recipe) => recipe.id === recipeId);
+  const breadcrumbCurrent = document.querySelector("#recipeBreadcrumbCurrent");
+  if (breadcrumbCurrent) {
+    breadcrumbCurrent.textContent = activeRecipe ? activeRecipe.title : "Рецепт не найден";
+  }
   if (!detailElement) return;
   if (!activeRecipe) {
     detailElement.innerHTML = `

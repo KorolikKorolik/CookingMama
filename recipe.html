@@ -44,7 +44,13 @@
     </nav>
     <main class="recipe-detail-section">
       <div class="container">
-        <a class="back-link" href="recipes.html"><i class="bi bi-arrow-left me-2"></i>Ко всем рецептам</a>
+        <nav class="breadcrumbs recipe-breadcrumbs" aria-label="Хлебные крошки">
+          <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="recipes.html">Все рецепты</a></li>
+            <li id="recipeBreadcrumbCurrent" aria-current="page">Рецепт</li>
+          </ol>
+        </nav>
         <article class="recipe-detail" id="recipeDetail" aria-live="polite"></article>
       </div>
     </main>
@@ -68,7 +74,7 @@
             </ul>
           </nav>
           <div class="footer-copyright">
-            <h2 class="footer-heading">Копирайт</h2>
+            <h2 class="footer-heading">Готовьте с удовольствием.</h2>
             <p class="footer-copy">© 2026 CookingMama. Все права защищены.</p>
           </div>
         </div>
